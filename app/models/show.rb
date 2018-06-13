@@ -7,8 +7,8 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
   # : this method should return the show with the highest rating. hint: use the highest_rating method as a helper method.
-    x = self.highest_rating
-    puts x
+    r = self.highest_rating
+    Show.find_by(rating: r)
   end
 
   def self.lowest_rating
